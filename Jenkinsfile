@@ -1,14 +1,3 @@
-/**
- * Production CI for Inspection Backend.
- *
- * Jenkins job  : inspection-be/prod (or inspection-be-prod)
- * SCM branch   : */release
- * Script Path  : Jenkinsfile
- *
- * Builds from the release branch only and deploys via
- * Euroasia_inspection_Infra_PRODUCTION.
- */
-
 pipeline {
 
     agent any
