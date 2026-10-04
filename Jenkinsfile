@@ -1,3 +1,13 @@
+/**
+ * Production CI for Inspection Backend.
+ *
+ * Jenkins job  : inspection-be/prod (or inspection-be-prod)
+ * SCM branch   : */release
+ * Script Path  : Jenkinsfile.prod
+ *
+ * Builds from the release branch only and deploys via platform/deploy-prod.
+ */
+
 pipeline {
 
     agent any
@@ -24,17 +34,6 @@ pipeline {
     }
 
     stages {
-
-        stage('Production approval') {
-            steps {
-                timeout(time: 30, unit: 'MINUTES') {
-                    input(
-                        message: "Build and deploy inspection-be #${env.BUILD_NUMBER} from release to PRODUCTION?",
-                        ok: 'Deploy to production'
-                    )
-                }
-            }
-        }
 
         stage('Checkout') {
             steps {
