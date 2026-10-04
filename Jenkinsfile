@@ -5,7 +5,8 @@
  * SCM branch   : */release
  * Script Path  : Jenkinsfile.prod
  *
- * Builds from the release branch only and deploys via platform/deploy-prod.
+ * Builds from the release branch only and deploys via
+ * Euroasia_inspection_Infra_PRODUCTION.
  */
 
 pipeline {
@@ -30,7 +31,7 @@ pipeline {
         IMAGE           = "${REGISTRY}/${APP_NAME}"
         IMAGE_TAG       = "${BUILD_NUMBER}"
         ENV_TAG         = "prod"
-        PLATFORM_JOB    = "platform/deploy-prod"
+        PLATFORM_JOB    = "EUROASIA_SCI_CLIENT_PORTAL/Euroasia_Inspection/Euroasia_inspection_Infra/Euroasia_inspection_Infra_PRODUCTION"
     }
 
     stages {
